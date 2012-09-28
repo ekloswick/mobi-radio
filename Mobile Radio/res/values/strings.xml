@@ -4,5 +4,13 @@
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">MobiRadio</string>
+    <string name="title_activity_listen">Listen</string>
+    <string name="button_listen">Listen</string>
+    <string name="button_news">News</string>
+    <string name="button_contests">Contests</string>
+    <string name="button_settings">Settings</string>
+    <string name="title_activity_news">News</string>
+    <string name="title_activity_contests">Contests</string>
+    <string name="title_activity_settings">Settings</string>
 
 </resources>

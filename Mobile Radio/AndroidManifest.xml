@@ -4,8 +4,8 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
-        android:targetSdkVersion="15" />
+        android:minSdkVersion="7"
+        android:targetSdkVersion="7" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
     <uses-permission android:name="android.permission.INTERNET"/>
 
@@ -24,30 +24,18 @@
         <activity
             android:name=".Listen"
             android:label="@string/title_activity_listen" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".News"
             android:label="@string/title_activity_news" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Contests"
             android:label="@string/title_activity_contests" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Settings"
             android:label="@string/title_activity_settings" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-            </intent-filter>
         </activity>
     </application>
 

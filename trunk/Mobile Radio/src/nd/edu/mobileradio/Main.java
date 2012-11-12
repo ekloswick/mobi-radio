@@ -73,13 +73,6 @@ public class Main extends Activity {
     
     public void onStart() {
 		super.onStart();
-			
-		
-		
-		
-		
-		
-		
 		
 		// Initialize the buttons with listeners for click events
         listenButton = (Button) findViewById(R.id.listenButton);

@@ -1,7 +1,6 @@
 <resources>
 
     <string name="app_name">Mobile Radio</string>
-    <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_main">MobiRadio</string>
     <string name="title_activity_listen">Listen</string>
@@ -12,5 +11,9 @@
     <string name="title_activity_news">News</string>
     <string name="title_activity_contests">Contests</string>
     <string name="title_activity_settings">Settings</string>
+    <string name="contest_info">Welcome to the contests page! Please click the button below to enter the contest!</string>
+    <string name="contest_enter_button">ENTER CONTEST!</string>
+    <string name="contest_results"></string>
+    <string name="settings_info">Please fill out or edit the appropriate information:</string>
 
 </resources>

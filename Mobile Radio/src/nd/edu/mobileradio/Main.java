@@ -42,26 +42,6 @@ public class Main extends Activity {
         	Intent myIntent = new Intent(Main.this, Settings.class);
         	Main.this.startActivity(myIntent);   
         }
-        
-    /*    
-       
-    	ParseUser user = new ParseUser();
-    	user.setUsername("E-fresh");
-    	user.setPassword("The Ancient Onez");
-    	user.setEmail("ekloswic@nd.edu");
-    	
-    	// other fields can be set just like with ParseObject
-    	user.put("phone", "789-456-1230");
-    	 
-    	user.signUpInBackground(new SignUpCallback() {
-    	  public void done(ParseException e) {
-    	    if (e == null) {
-    	    	listenButton.setText("Success!");
-    	    } else {
-    	    	listenButton.setText("FAILURE!");
-    	    }
-    	  }
-    	});*/
     
     }
 

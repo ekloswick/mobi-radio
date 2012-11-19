@@ -1,9 +1,11 @@
 package nd.edu.mobileradio;
 
 import com.parse.CountCallback;
+
 import com.parse.ParseException;
 import com.parse.ParseObject;
 import com.parse.ParseQuery;
+import com.parse.ParseUser;
 
 import android.os.Bundle;
 import android.app.Activity;
@@ -16,7 +18,8 @@ import android.widget.TextView;
 public class Contests extends Activity {
 
 	private Button enterContestButton;
-	
+	boolean enabled = true;
+
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,19 +34,22 @@ public class Contests extends Activity {
     
     public void onStart() {
 		super.onStart();
+		
 			
 		// Initialize the buttons with listeners for click events
 		enterContestButton = (Button) findViewById(R.id.enterContestButton);
 		enterContestButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {    
+            	
+            enabled = false;
+            ParseUser userName=	ParseUser.getCurrentUser();
             
             //enter the contest and then disable the contest button
             ParseObject contestData = new ParseObject("contestData");
-            contestData.put("UserName", "ThisWillBeTheUserName");
-            contestData.put("Name","This will be name");
+            contestData.put("User", userName);
             contestData.saveInBackground();
             enterContestButton.setText("Contest Entered!");
-            enterContestButton.setEnabled(false);           	
+                   	
         	
             //query to determine how many people have entered the contest. If the user is the winner number then display to them that they have won!
             ParseQuery query = new ParseQuery("contestData");
@@ -73,9 +79,13 @@ public class Contests extends Activity {
         	    else {
         	      Log.d("ERROR", "An error occured"); 
         	    }
+        		
         	  }
         	});           
+        	 enterContestButton.setEnabled(enabled); 
             }
+            
         });
+	
 	}
 }

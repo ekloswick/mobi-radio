@@ -85,7 +85,7 @@ public class Main extends Activity {
         settingsButton = (Button) findViewById(R.id.settingsButton);
         settingsButton.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-            	Intent myIntent = new Intent(v.getContext(), Signup.class);
+            	Intent myIntent = new Intent(v.getContext(), Settings.class);
                 startActivityForResult(myIntent, 0);
             }
         });

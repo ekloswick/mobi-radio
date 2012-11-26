@@ -5,7 +5,22 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical" >
-
+
+    <TextView
+        android:id="@+id/userNameView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:text="SHOULD BE USERNAME" />
+	<TextView
+        android:id="@+id/userEmailView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right"
+        android:gravity="right"
+        android:text="SHOULD BE EMAIL" />
+    
     <Button
         android:id="@+id/newsButton"
         android:layout_width="match_parent"

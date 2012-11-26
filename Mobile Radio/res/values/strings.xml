@@ -15,5 +15,7 @@
     <string name="contest_enter_button">ENTER CONTEST!</string>
     <string name="contest_results"></string>
     <string name="settings_info">Please fill out or edit the appropriate information (more than 3 characters each):</string>
+    <string name="user_name"></string>
+    <string name="hello_world">Hello world!</string>
 
 </resources>

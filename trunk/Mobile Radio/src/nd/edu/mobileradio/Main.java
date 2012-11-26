@@ -42,25 +42,10 @@ public class Main extends Activity {
         	Intent myIntent = new Intent(Main.this, Settings.class);
         	Main.this.startActivity(myIntent);   
         }
-    
     }
-
-    /*@Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_main, menu);
-        return true;
-    }*/
     
     public void onStart() {
 		super.onStart();
-		
-		// Initialize the buttons with listeners for click events
-        listenButton = (Button) findViewById(R.id.listenButton);
-        listenButton.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-             
-            }
-        });
         
         newsButton = (Button) findViewById(R.id.newsButton);
         newsButton.setOnClickListener(new OnClickListener() {

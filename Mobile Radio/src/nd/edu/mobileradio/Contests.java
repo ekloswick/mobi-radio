@@ -7,8 +7,13 @@ import com.parse.ParseObject;
 import com.parse.ParseQuery;
 import com.parse.ParseUser;
 
+import android.hardware.Sensor;
+import android.hardware.SensorEvent;
+import android.hardware.SensorEventListener;
+import android.hardware.SensorManager;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Context;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -19,23 +24,46 @@ public class Contests extends Activity {
 
 	private Button enterContestButton;
 	boolean enabled = true;
+	private SensorManager mSensorManager;
+	private ShakeEventListener mSensorListener;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_contests);
+        
+        mSensorListener = new ShakeEventListener();
+        mSensorManager = (SensorManager) getSystemService(Context.SENSOR_SERVICE);
+        mSensorManager.registerListener(mSensorListener,
+            mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+            SensorManager.SENSOR_DELAY_UI);
+
+
+        mSensorListener.setOnShakeListener(new ShakeEventListener.OnShakeListener() {
+
+          public void onShake() {
+        	  enterContestButton.setText("BLAKRFJKH");
+          }
+        });
     }
-/*
+    
     @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_contests, menu);
-        return true;
-    }*/
+    protected void onResume() {
+      super.onResume();
+      mSensorManager.registerListener(mSensorListener,
+          mSensorManager.getDefaultSensor(Sensor.TYPE_ACCELEROMETER),
+          SensorManager.SENSOR_DELAY_UI);
+    }
+
+    @Override
+    protected void onStop() {
+      mSensorManager.unregisterListener(mSensorListener);
+      super.onStop();
+    }
     
     public void onStart() {
 		super.onStart();
 		
-			
 		// Initialize the buttons with listeners for click events
 		enterContestButton = (Button) findViewById(R.id.enterContestButton);
 		enterContestButton.setOnClickListener(new OnClickListener() {

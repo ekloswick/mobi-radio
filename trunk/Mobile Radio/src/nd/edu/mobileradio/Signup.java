@@ -7,13 +7,15 @@ import com.parse.*;
 import android.os.Bundle;
 import android.app.Activity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-public class Settings extends Activity {
+public class Signup extends Activity {
 
 	private Button submitInfoButton;
 	
@@ -22,15 +24,15 @@ public class Settings extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_settings);
+        setContentView(R.layout.activity_signup);
     }
 
-    /*@Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        getMenuInflater().inflate(R.menu.activity_settings, menu);
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.mainmenu, menu);
         return true;
-    }*/
-    
+    }
     
     public void onStart() {
 		super.onStart();

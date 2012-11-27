@@ -14,19 +14,23 @@ import nd.edu.mobileradio.ListListener;
 import nd.edu.mobileradio.RssReader;
 
 public class News extends Activity {
-	/** 
-	 * This method creates main application view
-	 */
+	
+	private String feedURL = "http://www.southbendtribune.com/news/nationworld/rss2.0.xml";
+	
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		// Set view
 		setContentView(R.layout.activity_news);
 
+		setupFeed(feedURL);
+	}
+	
+	public void setupFeed(String feed)
+	{
 		try {
 			// Create RSS reader
-			RssReader rssReader = new RssReader("http://www.southbendtribune.com/news/mrss.xml");
-			//RssReader rssReader = new RssReader("http://www.southbendtribune.com/ws/content/collection/?collection=sbt_sports_photogalleries&key=d3IwcUN6Ym9NVEV0MWkzcEJsVEU2UFp3bWxmbVRzWFBxbVNyc0pjd1BOWjk4alBLSEpOdHRJVlhXK1dscWhvZg&version=1.0&limit=20");
+			RssReader rssReader = new RssReader(feed);
 			
 			// Get a ListView from main view
 			ListView Items = (ListView) findViewById(R.id.listMainView);
@@ -42,13 +46,12 @@ public class News extends Activity {
 		} catch (Exception e) {
 			Log.e("RssReader", e.getMessage());
 		}
-		
 	}
 	
 	@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
-        inflater.inflate(R.menu.mainmenu, menu);
+        inflater.inflate(R.menu.activity_news, menu);
         return true;
     }
 }

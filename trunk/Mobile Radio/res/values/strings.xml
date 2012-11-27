@@ -17,7 +17,8 @@
     <string name="contest_results"></string>
     <string name="signup_info">Please fill out the appropriate information (more than 3 characters each):</string>
     <string name="settings_info">Edit the information you want to change:</string>
-    <string name="user_name"></string>
+    <string name="user_name">Logout</string>
     <string name="hello_world">Hello world!</string>
+    <string name="title_activity_login">Login</string>
 
 </resources>

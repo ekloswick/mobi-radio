@@ -5,6 +5,8 @@ import java.util.List;
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
+import android.util.Xml;
+
 import nd.edu.mobileradio.RssItem;
 
 /**
@@ -38,7 +40,7 @@ public class RssReader {
 		RssParseHandler handler = new RssParseHandler();
 		
 		saxParser.parse(rssUrl, handler);
-
+		
 		return handler.getItems();
 		
 	}

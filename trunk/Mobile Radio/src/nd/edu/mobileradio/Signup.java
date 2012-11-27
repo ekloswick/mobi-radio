@@ -27,12 +27,12 @@ public class Signup extends Activity {
         setContentView(R.layout.activity_signup);
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.mainmenu, menu);
         return true;
-    }
+    }*/
     
     public void onStart() {
 		super.onStart();

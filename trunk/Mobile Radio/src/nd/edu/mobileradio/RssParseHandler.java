@@ -60,15 +60,31 @@ public class RssParseHandler extends DefaultHandler {
 	
 	@Override
 	public void characters(char[] ch, int start, int length) throws SAXException {
+		String temp = getXMLString(new String(ch, start, length));
+		
 		if (parsingTitle) {
 			if (currentItem != null)
-				currentItem.setTitle(new String(ch, start, length));
+				currentItem.setTitle(temp);
 		} else if (parsingLink) {
 			if (currentItem != null) {
-				currentItem.setLink(new String(ch, start, length));
+				currentItem.setLink(temp);
 				parsingLink = false;
 			}
 		}
 	}
+	
+	public static String getXMLString(String str)
+    {
+        if (str.contains("'"))
+        {
+            str = str.replace("'", "");
+        }
+        else if (str.contains("’"))
+        {
+        	str = str.replace("’", "");
+        }
+
+        return str;
+    }
 	
 }

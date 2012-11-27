@@ -49,7 +49,7 @@ public class Main extends Activity {
         	// go to Signup activity if they don't have login info
         	Log.d("Error","no sign in");
         	Intent myIntent = new Intent(Main.this, Signup.class);
-        	Main.this.startActivity(myIntent);   
+        	Main.this.startActivity(myIntent);
         }
     }
     

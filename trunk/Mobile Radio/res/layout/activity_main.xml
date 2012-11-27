@@ -5,41 +5,79 @@
     android:layout_height="match_parent"
     android:layout_gravity="center"
     android:orientation="vertical" >
-
-    <TextView
-        android:id="@+id/userNameView"
-        android:layout_width="wrap_content"
+
+    <LinearLayout
+        android:id="@+id/test"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:gravity="right"
-        android:text="SHOULD BE USERNAME" />
-	<TextView
-        android:id="@+id/userEmailView"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="right"
-        android:gravity="right"
-        android:text="SHOULD BE EMAIL" />
-    
+        android:background="#000000" >
+        
+       
+       <TextView
+            android:id="@+id/userNameText"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.5"
+            android:textColor="#FFFFFF"
+            android:text="Username:"
+            android:textSize="15sp" />
+        
+        <TextView
+            android:id="@+id/userNameView"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="#FF3300"
+            android:text="SHOULD BE USERNAME"
+            android:textSize="15sp" />
+         
+        <TextView
+            android:id="@+id/userEmailText"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="#FFFFFF"
+            android:text="Email:"
+            android:textSize="15sp" />
+
+        <TextView
+            android:id="@+id/userEmailView"
+            android:layout_width="0px"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:textColor="#FF3300"
+            android:text="SHOULD BE EMAIL"
+            android:textSize="15sp" />
+    </LinearLayout>
+
     <Button
         android:id="@+id/newsButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/button_news" />
-
+        android:background="#1CA6CD"
+        android:text="@string/button_news"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp" />
+
     <Button
         android:id="@+id/contestButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/button_contests" />
-
+        android:background="#A2D265"
+        android:text="@string/button_contests"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp" />
+
     <Button
         android:id="@+id/settingsButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_weight="1"
-        android:text="@string/button_settings" />
+        android:background="#10637B"
+        android:text="@string/button_settings"
+        android:textColor="#FFFFFF"
+        android:textSize="50sp" />
 
 </LinearLayout>

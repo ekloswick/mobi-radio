@@ -43,7 +43,7 @@ public class Signup extends Activity {
             public void onClick(View v) {
              Log.d("Click","Button Clicked");
              EditText mEdit;
-             TextView settingsText = (TextView)findViewById(R.id.settingsView);
+             TextView settingsText = (TextView)findViewById(R.id.signupView);
              
              mEdit   = (EditText)findViewById(R.id.editName);
              String userName = mEdit.getText().toString();

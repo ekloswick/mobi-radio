@@ -12,7 +12,7 @@
         tools:context=".Settings" />
 
     <TextView
-        android:id="@+id/nameView"
+        android:id="@+id/nameView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/settingsView"
@@ -20,47 +20,47 @@
         android:textSize="20dp" />
 
     <TextView
-        android:id="@+id/emailView"
+        android:id="@+id/emailView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-         android:layout_below="@+id/nameView"
+         android:layout_below="@+id/nameView2"
         android:text="Email" />
 
     <TextView
-        android:id="@+id/passwordView"
+        android:id="@+id/passwordView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20dp"
-        android:layout_below="@+id/emailView"
+        android:layout_below="@+id/emailView2"
         android:text="Password"/>
 
     <EditText
-        android:id="@+id/editName"
+        android:id="@+id/editName2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editEmail"
+        android:layout_alignRight="@+id/editEmail2"
         android:layout_below="@+id/settingsView"
-        android:layout_toRightOf="@+id/nameView"
+        android:layout_toRightOf="@+id/nameView2"
         android:ems="10"
         android:inputType="textPersonName" />
     
      <EditText
-         android:id="@+id/editEmail"
+         android:id="@+id/editEmail2"
          android:layout_width="wrap_content"
          android:layout_height="wrap_content"
-         android:layout_alignRight="@+id/editPassword"
-         android:layout_below="@+id/nameView"
-         android:layout_toRightOf="@+id/emailView"
+         android:layout_alignRight="@+id/editPassword2"
+         android:layout_below="@+id/nameView2"
+         android:layout_toRightOf="@+id/emailView2"
          android:ems="10"
          android:inputType="textEmailAddress" />
     
     <EditText
-        android:id="@+id/editPassword"
+        android:id="@+id/editPassword2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/emailView"
-        android:layout_toRightOf="@+id/passwordView"
+        android:layout_below="@+id/emailView2"
+        android:layout_toRightOf="@+id/passwordView2"
         android:ems="10"
         android:inputType="textPassword" />
 
@@ -68,8 +68,8 @@
         android:id="@+id/saveChangesButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editPassword"
-        android:layout_below="@+id/editPassword"
+        android:layout_alignRight="@+id/editPassword2"
+        android:layout_below="@+id/editPassword2"
         android:layout_marginTop="29dp"
         android:text="Save Changes" />
 

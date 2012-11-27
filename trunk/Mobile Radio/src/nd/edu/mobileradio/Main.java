@@ -9,7 +9,6 @@ import com.parse.SignUpCallback;*/
 import com.parse.*;
 
 import android.os.Bundle;
-import android.app.ActionBar;
 import android.app.Activity;
 import android.content.Intent;
 import android.util.Log;
@@ -22,8 +21,6 @@ import android.widget.TextView;
 
 public class Main extends Activity {
 
-	// Buttons
-	private Button listenButton;
 	private Button newsButton;
 	private Button contestButton;
 	private Button settingsButton;

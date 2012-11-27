@@ -44,7 +44,7 @@ public class Contests extends Activity {
              //on shake enter the contest
         	  if (canEnter) {
 	        	  canEnter = false;
-	        	  ParseUser userName=ParseUser.getCurrentUser();
+	        	  ParseUser userName = ParseUser.getCurrentUser();
 	              //enter the contest
 	              ParseObject contestData = new ParseObject("contestData");
 	              contestData.put("User", userName.getUsername());
@@ -58,20 +58,19 @@ public class Contests extends Activity {
           	    if (e == null) {
           	      // The count request succeeded. Log the count
   					  Log.d("SUCCESS", "There are " + count + " contest entries");
+
+					  TextView tempview;
+					  setContentView(R.layout.activity_contests);
+					  tempview=(TextView)findViewById(R.id.contest_results);
+  					  
   					  if (count == 10) //this is the winning user!
   					  {
   						  Log.d("SUCCESS","This is the winner!");  	
-  						  TextView tempview;
-  						  setContentView(R.layout.activity_contests);
-  						  tempview=(TextView)findViewById(R.id.contest_results);
   						  tempview.setText("You won!");
   					  }
   					  else
   					  {
   						  Log.d("FAILURE","You did not win");
-  						  TextView tempview;
-  						  setContentView(R.layout.activity_contests);
-  						  tempview=(TextView)findViewById(R.id.contest_results);
   						  tempview.setText("Sorry try again! You were entry #" +count + " in the contest");
   					  }
   					  

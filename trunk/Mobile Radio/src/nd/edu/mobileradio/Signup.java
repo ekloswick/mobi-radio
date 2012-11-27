@@ -6,6 +6,7 @@ import com.parse.*;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -18,8 +19,6 @@ import android.widget.TextView;
 public class Signup extends Activity {
 
 	private Button submitInfoButton;
-	
-	
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -67,6 +66,11 @@ public class Signup extends Activity {
 	            	    if (e == null) {
 	            	      // Hooray! Let them use the app now.
 	            	    	Log.d("SIGNUP SUCCESS","good job buddy");
+	            	    	
+	            	    	Intent myIntent = new Intent(getBaseContext(), Main.class);
+	  		                  startActivityForResult(myIntent, 0);
+	            	    	
+	            	    	
 	            	    } else {
 	            	      // Sign up didn't succeed. Look at the ParseException
 	            	      // to figure out what went wrong

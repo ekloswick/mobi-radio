@@ -24,10 +24,6 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Listen"
-            android:label="@string/title_activity_listen" >
-        </activity>
-        <activity
             android:name=".News"
             android:label="@string/title_activity_news" >
         </activity>
@@ -37,25 +33,19 @@
         </activity>
         <activity
             android:name=".Signup"
-            android:label="@string/title_activity_settings" >
+            android:label="@string/title_activity_signup" >
         </activity>
         <activity
             android:name=".Settings"
             android:label="@string/title_activity_settings" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
         </activity>
         <activity
             android:name=".Login"
             android:label="@string/title_activity_login" >
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Startup"
+            android:label="@string/title_activity_startup" >
         </activity>
     </application>
 

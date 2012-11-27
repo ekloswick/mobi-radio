@@ -14,6 +14,7 @@ import android.content.Intent;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.Button;
@@ -46,9 +47,9 @@ public class Main extends Activity {
         	useremailText.setText(currentUser.getEmail());
         	
         } else {
-        	// go to Signup activity if they don't have login info
+        	// go to Startup activity if they don't have login info
         	Log.d("Error","no sign in");
-        	Intent myIntent = new Intent(Main.this, Signup.class);
+        	Intent myIntent = new Intent(Main.this, Startup.class);
         	Main.this.startActivity(myIntent);
         }
     }
@@ -58,6 +59,17 @@ public class Main extends Activity {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.mainmenu, menu);
         return true;
+    }
+    
+    // logs out the user
+    public boolean onOptionsItemSelected(MenuItem item)
+    {
+    	ParseUser.getCurrentUser().logOut();
+    	Intent myIntent = new Intent(getBaseContext(), Startup.class);
+        startActivityForResult(myIntent, 0);
+        
+    	Log.d("Check", "The logout button was pressed");
+		return false;
     }
     
     public void onStart() {

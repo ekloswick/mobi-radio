@@ -23,7 +23,9 @@ public class Contests extends Activity {
 
 	private SensorManager mSensorManager;
 	private ShakeEventListener mSensorListener;
-	   private Handler mHandler = new Handler();
+	private Handler mHandler = new Handler();
+	private boolean canEnter = true;
+	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,14 +41,16 @@ public class Contests extends Activity {
         mSensorListener.setOnShakeListener(new ShakeEventListener.OnShakeListener() {
 
           public void onShake() {
-             	//on shake enter the contest
+             //on shake enter the contest
+        	  if (canEnter) {
+	        	  canEnter = false;
+	        	  ParseUser userName=ParseUser.getCurrentUser();
+	              //enter the contest
+	              ParseObject contestData = new ParseObject("contestData");
+	              contestData.put("User", userName.getUsername());
+	              contestData.saveInBackground();
+        	  }
         	  
-        	  ParseUser userName=ParseUser.getCurrentUser();
-              //enter the contest
-              ParseObject contestData = new ParseObject("contestData");
-              contestData.put("User", userName.getUsername());
-              contestData.saveInBackground();                	
-             
               //query to determine how many people have entered the contest. If the user is the winner number then display to them that they have won!
               ParseQuery query = new ParseQuery("contestData");
           	query.countInBackground(new CountCallback() {
@@ -84,7 +88,6 @@ public class Contests extends Activity {
           	    else {
           	      Log.d("ERROR", "An error occured"); 
           	    }
-      
           	  }
           	});  
           }

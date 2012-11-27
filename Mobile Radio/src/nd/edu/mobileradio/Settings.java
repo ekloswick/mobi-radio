@@ -28,12 +28,12 @@ public class Settings extends Activity {
         setContentView(R.layout.activity_settings);
     }
 
-    @Override
+    /*@Override
     public boolean onCreateOptionsMenu(Menu menu) {
         MenuInflater inflater = getMenuInflater();
         inflater.inflate(R.menu.mainmenu, menu);
         return true;
-    }
+    }*/
     
     public void onStart() {
 		super.onStart();
@@ -45,8 +45,6 @@ public class Settings extends Activity {
 	       mEdit.setText(currentUser.getUsername());
 	       mEdit   = (EditText)findViewById(R.id.editEmail2);
 	       mEdit.setText(currentUser.getEmail());
-	       
-	       
            
 		// Initialize the buttons with listeners for click events
 		saveChangesButton = (Button) findViewById(R.id.saveChangesButton);

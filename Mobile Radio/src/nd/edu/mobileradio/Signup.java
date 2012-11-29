@@ -53,14 +53,26 @@ public class Signup extends Activity {
              mEdit   = (EditText)findViewById(R.id.editEmail);
              String email = mEdit.getText().toString();
              
-             if (userName.length() < 4 || passWord.length() < 4 || email.length() < 4)
+             mEdit   = (EditText)findViewById(R.id.editAddress);
+             String address = mEdit.getText().toString();
+             
+             mEdit   = (EditText)findViewById(R.id.editPhone);
+             String phone = mEdit.getText().toString();
+             
+             mEdit   = (EditText)findViewById(R.id.editAge);
+             String age = mEdit.getText().toString();
+             
+             if (userName.length() < 4 || passWord.length() < 4 || email.length() < 4|| address.length() < 4 || phone.length() < 7)
             	 settingsText.setText("One of the fields has 3 or less characters, please try again");
              else {
 	             ParseUser user = new ParseUser();
 	             user.setUsername(userName);
 	             user.setPassword(passWord);
 	             user.setEmail(email);
-	         
+	             user.put("address", address);
+	             user.put("phone", phone);
+	             user.put("age", age);
+	             
 	             user.signUpInBackground(new SignUpCallback() {
 					public void done(ParseException e) {
 	            	    if (e == null) {

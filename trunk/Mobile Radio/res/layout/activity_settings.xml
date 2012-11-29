@@ -23,17 +23,9 @@
         android:id="@+id/emailView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
-         android:layout_below="@+id/nameView2"
-        android:text="Email" />
-
-    <TextView
-        android:id="@+id/passwordView2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textSize="20dp"
-        android:layout_below="@+id/emailView2"
-        android:text="Password"/>
+        android:layout_below="@+id/nameView2"
+        android:text="Email"
+        android:textSize="20dp" />
 
     <EditText
         android:id="@+id/editName2"
@@ -44,33 +36,102 @@
         android:layout_toRightOf="@+id/nameView2"
         android:ems="10"
         android:inputType="textPersonName" />
-    
-     <EditText
-         android:id="@+id/editEmail2"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignRight="@+id/editPassword2"
-         android:layout_below="@+id/nameView2"
-         android:layout_toRightOf="@+id/emailView2"
-         android:ems="10"
-         android:inputType="textEmailAddress" />
-    
+
     <EditText
-        android:id="@+id/editPassword2"
+        android:id="@+id/editEmail2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/emailView2"
-        android:layout_toRightOf="@+id/passwordView2"
+        android:layout_below="@+id/nameView2"
+        android:layout_toRightOf="@+id/emailView2"
         android:ems="10"
-        android:inputType="textPassword" />
+        android:inputType="textEmailAddress" />
 
     <Button
         android:id="@+id/saveChangesButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editPassword2"
-        android:layout_below="@+id/editPassword2"
-        android:layout_marginTop="29dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/editEmail2"
+        android:layout_marginBottom="215dp"
+        android:layout_marginRight="28dp"
         android:text="Save Changes" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editEmail2"
+        android:text="Address"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView1"
+        android:layout_marginTop="21dp"
+        android:text="Phone"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="21dp"
+        android:text="Age"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/saveChangesButton"
+        android:layout_alignTop="@+id/textView1"
+        android:ems="10" >
+
+        <requestFocus />
+    </EditText>
+
+    <EditText
+        android:id="@+id/editPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editAddress"
+        android:layout_alignTop="@+id/textView2"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/editAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/editPhone"
+        android:layout_alignTop="@+id/textView3"
+        android:ems="10"
+        android:inputType="number" />
+
+    <Button
+        android:id="@+id/passwordResetButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/saveChangesButton"
+        android:layout_centerVertical="true"
+        android:text="Password Reset Email Request" />
+
+    <Button
+        android:id="@+id/removeButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/saveChangesButton"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="99dp"
+        android:text="Remove User and Email" />
 
 </RelativeLayout>

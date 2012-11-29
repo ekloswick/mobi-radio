@@ -24,28 +24,28 @@
         android:id="@+id/emailView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
         android:layout_below="@+id/nameView"
-        android:text="Email" />
+        android:text="Email"
+        android:textSize="20dp" />
 
     <TextView
         android:id="@+id/passwordView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
         android:layout_below="@+id/emailView"
-        android:text="Password"/>
-    
-     <EditText
-         android:id="@+id/editEmail"
-         android:layout_width="wrap_content"
-         android:layout_height="wrap_content"
-         android:layout_alignRight="@+id/editPassword"
-         android:layout_below="@+id/nameView"
-         android:layout_toRightOf="@+id/emailView"
-         android:ems="10"
-         android:inputType="textEmailAddress" />
-    
+        android:text="Password"
+        android:textSize="20dp" />
+
+    <EditText
+        android:id="@+id/editEmail"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/editPassword"
+        android:layout_below="@+id/nameView"
+        android:layout_toRightOf="@+id/emailView"
+        android:ems="10"
+        android:inputType="textEmailAddress" />
+
     <EditText
         android:id="@+id/editPassword"
         android:layout_width="wrap_content"
@@ -54,15 +54,6 @@
         android:layout_toRightOf="@+id/passwordView"
         android:ems="10"
         android:inputType="textPassword" />
-
-    <Button
-        android:id="@+id/submitInfoButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/editPassword"
-        android:layout_below="@+id/editPassword"
-        android:layout_marginTop="29dp"
-        android:text="Submit" />
 
     <EditText
         android:id="@+id/editName"
@@ -76,5 +67,70 @@
 
         <requestFocus />
     </EditText>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editPassword"
+        android:text="Address"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/textView1"
+        android:layout_alignBottom="@+id/textView1"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10" />
+
+    <Button
+        android:id="@+id/submitInfoButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/editPassword"
+        android:layout_below="@+id/editAddress"
+        android:layout_marginTop="153dp"
+        android:text="Submit" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/editAddress"
+        android:layout_marginTop="26dp"
+        android:text="Phone Number"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/textView2"
+        android:layout_marginTop="37dp"
+        android:text="Age"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
+
+    <EditText
+        android:id="@+id/editPhone"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textView2"
+        android:ems="10"
+        android:inputType="phone" />
+
+    <EditText
+        android:id="@+id/editAge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/textView3"
+        android:layout_toRightOf="@+id/textView1"
+        android:ems="10"
+        android:inputType="number" />
 
 </RelativeLayout>
